@@ -29,6 +29,11 @@ pipeline{
 
             }
         }
+        stage('Calling from MyJenkinsFile'){
+        steps{
+         echo "Insdie my Jenkins file"
+        }
+        }
     }
     
 }
