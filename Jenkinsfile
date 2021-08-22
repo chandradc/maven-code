@@ -24,7 +24,7 @@ pipeline{
                 }
                
                  echo "Deploying...."
-                 build job: 'deploy-war'
+                 build job: '0822-deploy-to-stage'
 
             }
         }
