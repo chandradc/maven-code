@@ -25,6 +25,7 @@ pipeline{
                
                  echo "Deploying...."
                  build job: 'deploy-war'
+                 echo "Deployment Successful from My Jenkins File"
 
             }
         }
