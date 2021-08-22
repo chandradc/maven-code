@@ -22,9 +22,8 @@ pipeline{
                 timeout(time:5, unit:'MINUTES'){
                     input message: 'Approve the deployment to PROCEED'
                 }
-               
                  echo "Deploying...."
-                 build job: '0822-deploy-to-stage'
+                 build job: 'deploy-war'
 
             }
         }
