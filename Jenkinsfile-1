@@ -1,0 +1,24 @@
+pipeline{
+
+    agent any
+
+    stages{
+        stage("Build"){
+            steps{
+                 echo "Project build in progress...."
+                 build job: 'package-war'
+            }
+        }
+        stage("Deploy to tomcat"){
+            steps{
+                timeout(time:5, unit:'MINUTES'){
+                    input message: 'Approve the deployment to PROCEED'
+                }
+                 echo "Deploying...."
+                 build job: 'deploy-war-to-tomcat'
+
+            }
+        }
+    }
+    
+}
