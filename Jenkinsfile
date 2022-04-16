@@ -23,7 +23,7 @@ pipeline{
                     input message: 'Approve the deployment to PROCEED'
                 }
                  echo "Deploying...."
-                 build job: 'deploy-war'
+                 build job: 'deploy-to-staging'
 
             }
         }
