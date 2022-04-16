@@ -9,6 +9,11 @@ pipeline{
                  build job: 'package-war'
             }
         }
+        stage("maven version"){
+          steps{
+             bat 'mvn --version'
+          }
+        }
         stage("Deploy to tomcat"){
             steps{
                 timeout(time:5, unit:'MINUTES'){
