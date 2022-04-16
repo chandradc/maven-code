@@ -3,7 +3,7 @@ pipeline{
     agent any
 
     stages{
-        stage("Build"){
+        stage("Building my war now"){
             steps{
                  echo "Project build in progress...."
                  build job: 'package-war'
