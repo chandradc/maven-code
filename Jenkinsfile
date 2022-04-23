@@ -23,7 +23,7 @@ pipeline{
                     input message: 'Approve the deployment to PROCEED'
                 }
                  echo "Deploying...."
-                 build job: 'deploy-to-staging'
+                 build job: 'deploy-my-tomcat'
 
             }
         }
